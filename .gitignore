@@ -1,0 +1,11 @@
+bin/*
+build/*
+Debug/*
+lib/*
+Release/*
+.vs/*
+.vscode/*
+x64/*
+*.log
+*.sln
+*vcxproj*
