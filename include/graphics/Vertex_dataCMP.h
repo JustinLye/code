@@ -9,7 +9,7 @@ class Vertex_dataCMP : public Component
 public:
 	Vertex_dataCMP();
 	virtual ~Vertex_dataCMP();
-	inline const std::size_t& count()
+	inline std::size_t count() const
 	{
 		return m_Point_data.size();
 	}
@@ -26,6 +26,7 @@ protected:
 	std::vector<double> m_Point_data;
 	std::size_t m_Dimensions;
 	friend class Vertex_dataBLDR;
+	friend class Vertex_dataCONN;
 };
 
 #endif
