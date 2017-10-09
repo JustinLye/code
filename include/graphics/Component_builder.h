@@ -3,19 +3,14 @@
 #define __COMPONENT_BUILDER_H_INCLUDED__
 #include<stdexcept>
 #include<fstream>
-#include<map>
-#include<boost/property_tree/ptree.hpp>
-#include<boost/property_tree/xml_parser.hpp>
+#include"typedefs.h"
 #include"Log_file.h"
 
 template<typename T>
 class Component_builder
 {
 public:
-	typedef unsigned int comp_id;
-	typedef boost::optional<comp_id> opt_uint;
-	typedef boost::optional<std::string> opt_str;
-	typedef boost::optional<double> opt_dbl;
+
 	Component_builder<T>();
 	virtual ~Component_builder<T>()
 	{
