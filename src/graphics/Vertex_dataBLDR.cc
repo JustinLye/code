@@ -11,7 +11,7 @@ Vertex_dataBLDR::~Vertex_dataBLDR()
 
 }
 
-Point_data<double> Vertex_dataBLDR::process_point(const boost::property_tree::ptree& Prop_tree)
+void Vertex_dataBLDR::process_point(const boost::property_tree::ptree& Prop_tree, const comp_id& Id)
 {
 	using namespace boost::property_tree;
 	ptree::const_iterator Root = Prop_tree.begin();
@@ -24,23 +24,20 @@ Point_data<double> Vertex_dataBLDR::process_point(const boost::property_tree::pt
 		}
 		m_Point_queue.push(*Point);
 	}
-	return create_point_data();
+	push_back_point_data(Id);
 }
 
-Point_data<double> Vertex_dataBLDR::create_point_data()
+void Vertex_dataBLDR::push_back_point_data(const comp_id& Id)
 {
-	if (m_Point_queue.size() != 3)
+	if (m_Point_queue.size() != m_Component_map[Id].m_Dimensions)
 	{
-		throw std::runtime_error(("Point queue should contain 3 points. Possible malformed xml in config file: " + std::string(m_Config_fp)).c_str());
+		throw std::runtime_error(("Point queue should contain " + boost::lexical_cast<std::string>(m_Component_map[Id].m_Dimensions) + (m_Component_map[Id].m_Dimensions <= 1 ? " point " : " points") + ", but " + boost::lexical_cast<std::string>(m_Point_queue.size()) + " points were found. Possible malformed xml in config file: " + std::string(m_Config_fp)).c_str());
 	}
-	Point_data<double> Result_data;
-	Result_data.x = m_Point_queue.front();
-	m_Point_queue.pop();
-	Result_data.y = m_Point_queue.front();
-	m_Point_queue.pop();
-	Result_data.z = m_Point_queue.front();
-	m_Point_queue.pop();
-	return Result_data;
+	while (!m_Point_queue.empty())
+	{
+		m_Component_map[Id].m_Point_data.push_back(m_Point_queue.front());
+		m_Point_queue.pop();
+	}
 }
 
 void Vertex_dataBLDR::build(const boost::property_tree::ptree& Prop_tree)
@@ -53,22 +50,19 @@ void Vertex_dataBLDR::build(const boost::property_tree::ptree& Prop_tree)
 	for (Root; Root != Prop_tree.end(); Root++)
 	{
 		opt_uint Id = Root->second.get_optional<comp_id>("Id");
+		opt_uint Dimensions = Root->second.get_optional<unsigned int>("Dimensions");
 		boost::optional<const ptree&> Sub_root = Root->second.get_child_optional("Points");
-		if (!Id || !Sub_root)
+		if (!Id || !Dimensions || !Sub_root)
 		{
 			throw std::runtime_error(("Malformed xml in config file: " + std::string(m_Config_fp)).c_str());
 		}
 		Vert_cmp.m_Id = *Id;
+		Vert_cmp.m_Dimensions = *Dimensions;
 		m_Component_map[*Id] = Vert_cmp;
-		Point_data<double> Vert_data;
 		ptree::const_iterator Point_root = Sub_root->begin();
 		for (Point_root; Point_root != Sub_root->end(); Point_root++)
 		{
-			m_Component_map[*Id].m_Point_data.push_back(process_point(Point_root->second));
-			if (!m_Point_queue.empty())
-			{
-				throw std::runtime_error(("Point queue should be empty. Possible malformed xml in config file: " + std::string(m_Config_fp)).c_str());
-			}
+			process_point(Point_root->second, *Id);
 		}
 	}
 }
