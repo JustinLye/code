@@ -7,9 +7,6 @@
 #include<GL/glew.h>
 #include<GLFW/glfw3.h>
 
-#define STD_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
-
 #include<vector>
 #include"Log_file.h"
 

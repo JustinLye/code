@@ -1,7 +1,6 @@
 #ifndef TEXTURE_TYPE_H_INCLUDED
 #define TEXTURE_TYPE_H_INCLUDED
-
-#include "Graphics_sys.h" // for graphics headers
+#include "Graphics_sys.h"
 #include "Component.h"
 class Texture_type : public Component
 {

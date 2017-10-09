@@ -1,9 +1,8 @@
 #ifndef TEXTURE2D_CMP_H_INCLUDED
 #define TEXTURE2D_CMP_H_INCLUDED
-
 #include "Texture_type.h"
 #include "Texture_imageCMP.h"
-
+#include "SOIL.h"
 
 class Texture2D_CMP : public Texture2D
 {

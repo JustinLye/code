@@ -18,7 +18,7 @@ private:
 	const GLchar* Window_title;
 	GLFWwindow* Window_ptr;
 	Graphics_sys* Graphics;
-	jl::Log_file Log;
+	jl::Log_file m_Log;
 
 };
 
