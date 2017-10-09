@@ -29,4 +29,18 @@ protected:
 	friend class Vertex_dataCONN;
 };
 
+class Vertex_dataCOMP : public Vertex_dataCMP
+{
+public:
+	Vertex_dataCOMP();
+	virtual ~Vertex_dataCOMP();
+	std::vector<std::pair<unsigned int, unsigned int>>& get_attribs()
+	{
+		return m_Attribs;
+	}
+protected:
+	std::vector<std::pair<unsigned int, unsigned int>> m_Attribs;
+	friend class Vertex_dataCONN;
+};
+
 #endif

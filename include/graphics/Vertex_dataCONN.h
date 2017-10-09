@@ -5,7 +5,7 @@
 #include "Vertex_dataCMP.h"
 #include "Component_connector.h"
 
-class Vertex_dataCONN : public Component_connector<Vertex_dataCMP, Vertex_dataCMP>
+class Vertex_dataCONN : public Component_connector<Vertex_dataCMP, Vertex_dataCOMP>
 {
 public:
 	Vertex_dataCONN();
@@ -34,6 +34,7 @@ protected:
 	};
 	std::vector<Comp_data> m_Comps_data;
 	std::size_t m_Point_count;
+	std::vector<std::pair<unsigned int, unsigned int>> m_Attribs;
 	virtual void fill_comp_data(const boost::property_tree::ptree& Prop_tree);
 	virtual void connect_comp_data(const unsigned int& Id);
 	virtual void connect(const boost::property_tree::ptree& Prop_tree);

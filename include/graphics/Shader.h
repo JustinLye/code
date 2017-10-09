@@ -12,15 +12,15 @@ public:
 	void create_program(const GLchar* Vertex_shader_path, const GLchar* Frag_shader_path);
 	inline GLuint get_program() const
 	{
-		return Program;
+		return m_Program;
 	}
 private:
-	GLuint Program;
-	GLuint Vertex_shader_id;
-	GLuint Fragment_shader_id;
+	GLuint m_Program;
+	GLuint m_Vertex_shader_id;
+	GLuint m_Fragment_shader_id;
 	void load_shader(const GLchar* Shader_str, GLenum Type);
 	void create_program();
-	Log_file Log;
+	Log_file m_Log;
 
 
 };
