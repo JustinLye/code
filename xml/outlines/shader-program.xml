@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shader-program>
+  <id></id>
+  <vertex-fp></vertex-fp>
+  <fragment-fp></fragment-fp>
+</shader-program>

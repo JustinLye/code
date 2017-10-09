@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<texture-cords>
+  <ComponentID></ComponentID>
+  <data-points>
+    <point>
+      <x></x>
+      <y></y>
+    </point>
+    ...
+    ...
+    <point>
+      <x></x>
+      <y></y>
+    </point>
+  </data-points>
+</texture-cords>

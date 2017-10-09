@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vertex-array-component>
+  <id></id>
+  <composite-cords-id></composite-cords-id>
+  <shader-program-id></shader-program-id>
+  <texture-connectors><!-- Optional -->
+    <connector-id></connector-id>
+    ...
+    ...
+    <connector-id></connector-id>
+  </texture-connectors>
+</vertex-array-component>

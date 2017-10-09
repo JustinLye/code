@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Composite-texture>
+  <ComponentID></ComponentID>
+  <texture-image-id>unsigned int</texture-image-id>
+  <texture-params-id>unsigned int</texture-params-id>
+</Composite-texture>

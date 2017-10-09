@@ -1,0 +1,5 @@
+<ShaderProgram>
+  <Id>3</Id>
+  <VertexFilePath>C:\\code\\shaders\\vertshader01.vs</VertexFilePath>
+  <FragmentFilePath>C:\\code\\shaders\\fragshader01.frag</FragmentFilePath>
+</ShaderProgram>

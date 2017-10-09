@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureImage>
+  <ComponentID>unsigned int</ComponentID>
+  <!-- Valid path to texture image file -->
+  <ImageFilePath>/path/to/image.jpg</ImageFilePath>
+</TextureImage>

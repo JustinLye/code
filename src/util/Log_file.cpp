@@ -19,8 +19,8 @@ jl::Log_file::~Log_file()
 		log.setstate(std::ios_base::goodbit);
 	log << MSG_DIV2 << std::endl << MSG_CLOSELOGGIN_SESSION << std::endl << MSG_DIV2 << std::endl;
 	log.close();
-	if (log.rdstate() != std::ios_base::goodbit)
-		throw std::system_error::runtime_error("Log file failed to be closed.");
+//	if (log.rdstate() != std::ios_base::goodbit)
+		//throw std::system_error::runtime_error("Log file failed to be closed.");
 	
 }
 

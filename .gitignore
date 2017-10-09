@@ -9,3 +9,7 @@ x64/*
 *.log
 *.sln
 *vcxproj*
+notes/ideas.txt notes/scratch.txt notes/xml-layouts.xml
+config/components
+notes/ideas.txt notes/scratch.txt notes/xml-layouts.xml
+notes

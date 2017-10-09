@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<color-coords>
+  <id></id>
+  <point>
+    <r></r>
+    <g></g>
+    <b></b>
+  </point>
+  ...
+  ...
+  <point>
+    <r></r>
+    <g></g>
+    <b></b>      
+  </point>
+</color-coords>

@@ -1,0 +1,40 @@
+<PointData>
+  <Id>3</Id>
+  <Points>
+    <Point>
+      <x>-0.5</x>
+      <y>-0.5</y>
+      <z>0.0</z>
+    </Point>
+    <Point>
+      <x>0.0</x>
+      <y>0.5</y>
+      <z>0.0</z>
+    </Point>
+    <Point>
+      <x>0.5</x>
+      <y>-0.5</y>
+      <z>0.0</z>
+    </Point>
+  </Points>
+</PointData>
+<PointData>
+  <Id>4</Id>
+  <Points>
+    <Point>
+      <x>-0.5</x>
+      <y>-0.5</y>
+      <z>0.0</z>
+    </Point>
+    <Point>
+      <x>0.0</x>
+      <y>0.5</y>
+      <z>0.0</z>
+    </Point>
+    <Point>
+      <x>0.5</x>
+      <y>-0.5</y>
+      <z>0.0</z>
+    </Point>
+  </Points>  
+</PointData>

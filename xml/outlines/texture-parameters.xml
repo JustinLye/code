@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureParameters>
+  <ComponentID>unsigned int</ComponentID>
+  <TextureType>GLenum</TextureType>
+  <IntegerParameters>
+    <Target>GLenum</Target>
+    <Pname>GLenum</Pname>
+    <Param>GLint</Param>
+  </IntegerParameters>
+  <FloatParameters>
+    <Target>GLenum</Target>
+    <Pname>GLenum</Pname>
+    <Param>GLfloat</Param>
+  </FloatParameters>
+</TextureParameters>

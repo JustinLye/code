@@ -1,0 +1,12 @@
+<TextureImage>
+  <Id>1</Id>
+  <ImageFilePath>C:\\code\\img\\texture_01.png</ImageFilePath>
+</TextureImage>
+<TextureImage>
+  <Id>2</Id>
+  <ImageFilePath>C:\\code\\img\\texture_02.png</ImageFilePath>
+</TextureImage>
+<TextureImage>
+  <Id>3</Id>
+  <ImageFilePath>C:\\code\\img\\texture_02.png</ImageFilePath>
+</TextureImage>

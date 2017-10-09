@@ -23,16 +23,27 @@
 #if !defined(MESSAGE_SOURCE)
 #define MESSAGE_SOURCE jl::Message_source(JL_FILENAME, __FUNCTION__, __LINE__)
 #endif
+#if !defined(INFO)
+#define INFO(Message_desc) jl::Info_message(MESSAGE_SOURCE, Message_desc)
+#endif
 #if !defined(INFO_MESSAGE)
 #define INFO_MESSAGE(Message_desc) jl::Info_message(MESSAGE_SOURCE, Message_desc)
 #endif
 #if !defined(SYS_ERROR_MESSAGE)
 #define SYS_ERROR_MESSAGE(Sys_error_code) jl::System_error_message(MESSAGE_SOURCE, Sys_error_code)
 #endif
+
+#if !defined(SYSERR)
+#define SYSERR(Sys_error_code) jl::System_error_message(MESSAGE_SOURCE, Sys_error_code)
+#endif
+
 #if !defined(USR_ERROR_MESSAGE)
 #define APP_ERROR_MESSAGE(Message_desc) jl::Application_error_message(MESSAGE_SOURCE, Message_desc)
 #endif
 
+#if !defined(APPERR)
+#define APPERR(Message_desc) jl::Application_error_message(MESSAGE_SOURCE, Message_desc)
+#endif
 namespace jl {
 
 	class Log_file {

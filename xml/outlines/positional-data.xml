@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<positional-data>
+  <id></id>
+  <points>
+    <point>
+      <x></x>
+      <y></y>
+      <z></z>
+    </point>
+    ...
+    ...
+    <point>
+      <x></x>
+      <y></y>
+      <z></z>
+    </point>
+  </points>
+</positional-data>
+

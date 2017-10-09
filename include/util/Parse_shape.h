@@ -12,6 +12,7 @@ struct Shape_data_pack
 	GLuint Total_data_points;
 	GLuint Total_dimensions;
 	std::vector<GLfloat> Data_points;
+	std::vector<GLfloat> Element_buffer;
 	bool Has_position_data;
 	bool Has_color_data;
 	bool Has_texture_data;
